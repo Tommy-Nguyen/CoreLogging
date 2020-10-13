@@ -18,7 +18,7 @@ Swift:
 
 import CoreUtils
 
-
+[url=https://ibb.co/SP32ZqR][img]https://i.ibb.co/2ykwpXg/Screen-Shot-2020-10-05-at-16-28-39.png[/img][/url]
 
 Properties:
 message: message to log,
