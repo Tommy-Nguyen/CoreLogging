@@ -12,13 +12,16 @@ Usage
 Object-C : 
 @import CoreUtilsKit;
 
-
+NSString *file = [[NSString alloc] initWithFormat:@"%s", __FILE__];
+NSString *func = [[NSString alloc] initWithFormat:@"%s", __FUNCTION__];
+CoreLogging *log = [[CoreLogging alloc] initWith: TRUE logToFile: true logToView: FALSE];
+[log debug:@"Debug message" file: file, function: func, line:1];
 
 Swift:
-
 import CoreUtils
 
-https://i.ibb.co/VtqdkX2/Screen-Shot-2020-10-05-at-16-28-39.png
+let log = CoreLogging(true, logToFile: false, logToView: false)
+log.info("Information message", file: #file, function: #function, line: #line)
 
 Properties:
 message: message to log,
