@@ -9,39 +9,41 @@ warning: appropriate for critical error conditions that usually require immediat
 Setup CoreLogger Module
 
 Usage
-Object-C : 
+
+*Object-C : 
 @import CoreUtilsKit;
 
 NSString *file = [[NSString alloc] initWithFormat:@"%s", __FILE__];
-
 NSString *func = [[NSString alloc] initWithFormat:@"%s", __FUNCTION__];
-
 CoreLogging *log = [[CoreLogging alloc] initWith: TRUE logToFile: true logToView: FALSE];
-
 [log debug:@"Debug message" file: file, function: func, line:1];
 
-Swift:
+*Swift:
+
 import CoreUtils
 
 let log = CoreLogging(true, logToFile: false, logToView: false)
-
 log.info("Information message", file: #file, function: #function, line: #line)
 
 Properties:
-message: message to log,
+message: message to log
+
 file: file that calls the function
+
 line: line of code from the file where the function is call
+
 function: function that calls the functon
+
 Output
 
-Console Xcode
+*Console Xcode
 
-File saving
+*File saving
 
 The core concepts
 Core logger supports configuration print to console, write to local file and properties of message logging.
 
-Log to Xcode console 
+*Log to Xcode console 
 
 set true value to allowToPrint
 with Logger Module Xcode can to gets powerful logging functionality to its console including .
@@ -53,7 +55,7 @@ logging to a file is great for development. You can attach the log file to an em
 the file location is adjustable and on default the file is stored in the Cache directory of your app.
 Log to Screen View
 
-Show screen to view the logging text on your device.
+*Show screen to view the logging text on your device.
 
 In that page, you also can tap & hold view to moving it, and click button close to hidden this view.
 
